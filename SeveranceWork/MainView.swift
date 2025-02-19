@@ -12,11 +12,11 @@ struct MainView: View {
     var body: some View {
         ZStack {
          
-            ImageView(isWorkMode: .constant(false))
+            ImageView(isWorkMode: $isWorkMode)
             
-            ButtonView(isWorkMode: .constant(false))
+            ButtonView(isWorkMode: $isWorkMode)
              
-            CitationView(isWorkMode: .constant(false))
+            CitationView(isWorkMode: $isWorkMode)
             }
            
             
