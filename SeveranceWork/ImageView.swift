@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct ImageView: View {
+    @Binding var isWorkMode: Bool
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Image(isWorkMode ? "SeveranceWork" : "severanceP")
+                .resizable()
+                .scaledToFill()
+                .frame(width: 150, height: .infinity)
+        
     }
 }
 
 #Preview {
-    ImageView()
+    ImageView(isWorkMode: .constant(false))
 }
