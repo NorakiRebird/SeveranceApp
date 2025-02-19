@@ -1,33 +1,29 @@
 //
-//  ContentView.swift
+//  MainView.swift
 //  SeveranceWork
 //
-//  Created by Rayann chaghla on 17/02/2025.
+//  Created by Rayann chaghla on 19/02/2025.
 //
+
 import SwiftUI
 
-struct ContentView: View {
-    
-    // crée un état qui à un booléen qui est par défaut sur false
-    @Binding var isWorkMode:  Bool
-    
+struct MainView: View {
+    @State private var isWorkMode = false
     var body: some View {
-        
         ZStack {
          
             ImageView(isWorkMode: .constant(false))
             
-                ButtonView()
+            ButtonView(isWorkMode: .constant(false))
              
             CitationView(isWorkMode: .constant(false))
             }
            
             
             .ignoresSafeArea()
-        }
     }
-
+}
 
 #Preview {
-    ContentView(isWorkMode: .constant(false))
+    MainView()
 }
