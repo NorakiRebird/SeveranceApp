@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ButtonView: View {
-    @State private var isWorkMode = false
+    @Binding var isWorkMode: Bool
     var body: some View {
         VStack(alignment: .center, spacing: 5) {
             HStack(spacing: 15){
@@ -73,5 +73,5 @@ struct ButtonView: View {
     }
 }
 #Preview {
-    ButtonView()
+    ButtonView(isWorkMode: .constant(false))
 }

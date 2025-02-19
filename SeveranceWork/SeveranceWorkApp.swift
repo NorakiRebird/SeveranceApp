@@ -11,7 +11,7 @@ import SwiftUI
 struct SeveranceWorkApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(isWorkMode: .constant(false))
+            MainView()
         }
     }
 }
